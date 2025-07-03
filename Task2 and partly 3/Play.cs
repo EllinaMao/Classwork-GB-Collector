@@ -41,13 +41,16 @@ namespace Task2_and_partly_3
             Actors = actors;
         }
 
-        ~Play()
+        ~Play() 
         {
+            Console.WriteLine("Дестуктора финалка");
+
             Dispose(false);
         }
 
         public void Dispose()
         {
+            Console.WriteLine("Бльоп");
             Dispose(true);
             GC.SuppressFinalize(this);
         }
@@ -59,7 +62,8 @@ namespace Task2_and_partly_3
             {
                 if (disposing)
                 {
-                     Actors.Clear();
+                    Console.WriteLine($"Мама, удалился!");
+                    Actors.Clear();
                 }
                 Title = null;
                 Theater = null;

@@ -30,7 +30,14 @@ namespace Classwork
         public DateOnly ReleaseYear { get; set; }
 
         //private bool _disposed = false;
-
+        public Film()
+        {
+            Title = "Неизвестный фильм";
+            Studio = "Неизвестная киностудия";
+            Genre = "Неизвестный жанр";
+            Duration = new TimeOnly(0, 0);
+            ReleaseYear = new DateOnly(2000, 1, 1);
+        }
         public Film(string title, string studio, string genre, TimeOnly duration, DateOnly releaseYear)
         {
             Title = title;
@@ -42,11 +49,11 @@ namespace Classwork
 
         ~Film()
         {
-            Console.WriteLine($"Деструктор вызван для фильма: {Title}");
+            Console.WriteLine($"Я деструктор!");
         }
         public void Dispose()
         {
-            Console.WriteLine($"Освобождение ресурсов фильма: {Title}");
+            Console.WriteLine($"Я удаляюсь!");
             //Dispose(true);
             Title = null;
             Studio = null;
