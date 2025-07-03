@@ -29,7 +29,7 @@ namespace Classwork
         public TimeOnly Duration { get; set; }
         public DateOnly ReleaseYear { get; set; }
 
-        private bool _disposed = false;
+        //private bool _disposed = false;
 
         public Film(string title, string studio, string genre, TimeOnly duration, DateOnly releaseYear)
         {
